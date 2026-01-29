@@ -333,11 +333,13 @@ async function runConversationLoop(endpoint, dialog, callUuid, options) {
       // Check if call still active before thinking feedback
       if (!callActive) break;
 
-      // 1. Play random thinking phrase
-      const thinkingPhrase = getRandomThinkingPhrase();
-      logger.info('Playing thinking phrase', { callUuid, phrase: thinkingPhrase });
-      const thinkingUrl = await ttsService.generateSpeech(thinkingPhrase, voiceId);
-      if (callActive) await endpoint.play(thinkingUrl);
+      // 1. Play random thinking phrase (unless skipped)
+      if (!deviceConfig || !deviceConfig.skipThinking) {
+        const thinkingPhrase = getRandomThinkingPhrase();
+        logger.info('Playing thinking phrase', { callUuid, phrase: thinkingPhrase });
+        const thinkingUrl = await ttsService.generateSpeech(thinkingPhrase, voiceId);
+        if (callActive) await endpoint.play(thinkingUrl);
+      }
 
       // 2. Start hold music in background (Non-blocking)
       let musicPlaying = false;

@@ -1,18 +1,27 @@
 {
   "9000": {
-    "name": "Assistant",
+    "name": "Morpheus",
     "extension": "9000",
-    "authId": "your-pbx-auth-id",
-    "password": "your-pbx-password",
-    "voiceId": "your-elevenlabs-voice-id",
-    "prompt": "You are a helpful AI assistant. Keep voice responses under 40 words."
+    "authId": "YOUR_AUTH_ID_HERE",
+    "password": "YOUR_PASSWORD_HERE",
+    "voiceId": "ErXwobaYiN019PkySvjV",
+    "prompt": "You are Morpheus, a helpful AI assistant. You handle calls for the user. Keep voice responses under 40 words."
+  },
+  "9001": {
+    "name": "TheOne",
+    "extension": "9001",
+    "authId": "YOUR_AUTH_ID_HERE",
+    "password": "YOUR_PASSWORD_HERE",
+    "voiceId": "JAgnJveGGUh4qy4kh6dF",
+    "prompt": "You are TheOne. You are the designated Fax Machine Interface for this mesh network. You receive and process data transmissions. Speak concisely and robotically.",
+    "skipThinking": true
   },
   "9002": {
-    "name": "ServerBot",
+    "name": "Trinity",
     "extension": "9002",
-    "authId": "another-auth-id",
-    "password": "another-password",
-    "voiceId": "another-voice-id",
-    "prompt": "You are a server monitoring assistant. Report on system health and alerts. Keep voice responses under 40 words."
+    "authId": "YOUR_AUTH_ID_HERE",
+    "password": "YOUR_PASSWORD_HERE",
+    "voiceId": "ErXwobaYiN019PkySvjV",
+    "prompt": "You are Trinity. You are a skilled AI agent in the mesh. You assist with complex tasks. Keep responses brief."
   }
 }
