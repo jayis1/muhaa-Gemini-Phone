@@ -4,6 +4,12 @@
 
 Voice interface for Gemini Code via FreePBX/SIP. Call your AI, and your AI can call you.
 
+## What's New in v4.3.0
+
++ 🕸️ **Mesh AI Architecture** - Default support for a mesh of interconnected AI agents (Morpheus, TheOne, Trinity).
++ 📠 **Robotic Agents** - New `skipThinking` configuration for agents like "TheOne" (Fax) to sound purely robotic without filler phrases.
++ 🌍 **Public Release** - Simplified installation via `curl | bash` and streamlined configuration.
+
 ## What's New in v4.2.0
 
 + 🏗️ **Multi-Stack Orchestration** - Run multiple independent Gemini Phone instances on a single server! Each stack gets its own isolated SIP trunk, Voice App, and Logic Engine. Perfect for assigning different AI personalities (e.g., "Sales", "Support") to different phone numbers.
@@ -182,7 +188,7 @@ Gemini Phone gives your Gemini Code installation a phone number. It's a "Beautif
 ### 1. Install
 
 ```bash
-curl -sSL https://raw.githubusercontent.com/jayis1/muhaa-Gemini-Phone/main/install.sh | bash
+curl -sSL https://raw.githubusercontent.com/theNetworkChuck/gemini-phone/main/install.sh | bash
 ```
 
 The installer performs the following steps:
