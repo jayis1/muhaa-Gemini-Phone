@@ -766,7 +766,33 @@ function createDefaultConfig() {
       drachtio: generateSecret(),
       freeswitch: generateSecret()
     },
-    devices: [],
+    devices: [
+      {
+        name: 'Morpheus',
+        extension: '9000',
+        authId: '',
+        password: '',
+        voiceId: 'ErXwobaYiN019PkySvjV',
+        prompt: 'You are Morpheus, a helpful AI assistant. You handle calls for the user. Keep voice responses under 40 words.'
+      },
+      {
+        name: 'TheOne',
+        extension: '9001',
+        authId: '',
+        password: '',
+        voiceId: 'JAgnJveGGUh4qy4kh6dF',
+        prompt: 'You are TheOne. You are the designated Fax Machine Interface for this mesh network. You receive and process data transmissions. Speak concisely and robotically.',
+        skipThinking: true
+      },
+      {
+        name: 'Trinity',
+        extension: '9002',
+        authId: '',
+        password: '',
+        voiceId: 'ErXwobaYiN019PkySvjV',
+        prompt: 'You are Trinity. You are a skilled AI agent in the mesh. You assist with complex tasks. Keep responses brief.'
+      }
+    ],
     outbound: {
       callerId: '',
       ringTimeout: 30,
