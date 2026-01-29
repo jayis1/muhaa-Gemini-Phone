@@ -214,10 +214,13 @@ async function conversationLoop(endpoint, dialog, callUuid, options, deviceConfi
       }
 
       // THINKING FEEDBACK
-      const thinkingPhrase = getRandomThinkingPhrase();
-      console.log('[' + new Date().toISOString() + '] THINKING: "' + thinkingPhrase + '"');
-      const thinkingUrl = await ttsService.generateSpeech(thinkingPhrase, voiceId);
-      await endpoint.play(thinkingUrl);
+      // Skip thinking phrases if configured (e.g. for Fax/Robotic agents)
+      if (!deviceConfig || !deviceConfig.skipThinking) {
+        const thinkingPhrase = getRandomThinkingPhrase();
+        console.log('[' + new Date().toISOString() + '] THINKING: "' + thinkingPhrase + '"');
+        const thinkingUrl = await ttsService.generateSpeech(thinkingPhrase, voiceId);
+        await endpoint.play(thinkingUrl);
+      }
 
       // Hold music in background
       let musicPlaying = false;

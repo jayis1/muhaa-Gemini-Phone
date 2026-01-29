@@ -4,3 +4,5 @@ node_modules/
 coverage/
 dist/
 .DS_Store
+voice-app/config/devices.json
+voice-app/recordings/

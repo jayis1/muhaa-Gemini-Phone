@@ -13,7 +13,8 @@
     "authId": "TheOneAuth",
     "password": "TheOnePassword",
     "voiceId": "JAgnJveGGUh4qy4kh6dF",
-    "prompt": "You are TheOne. You are the designated Fax Machine Interface for this mesh network. You receive and process data transmissions. Speak concisely and robotically."
+    "prompt": "You are TheOne. You are the designated Fax Machine Interface for this mesh network. You receive and process data transmissions. Speak concisely and robotically.",
+    "skipThinking": true
   },
   "9002": {
     "name": "Trinity",

@@ -373,18 +373,43 @@ lxc.mount.entry: /dev/dri dev/dri none bind,optional,create=dir
 | `gemini-phone update` | Update Gemini Phone |
 | `gemini-phone uninstall` | Complete removal |
 
-## Device Personalities
+## Mesh AI Call Center Configuration
 
-Each SIP extension can have its own identity with a unique name, voice, and personality prompt:
+The system is configured as a **Mesh AI Call Center**, allowing multiple independent AI agents to coexist on the same network, each with its own phone number, personality, and capabilities.
 
-```bash
-gemini-phone device add
-```
+### Default Agents (The Mesh)
 
-Example devices:
+The system comes pre-configured with three core agents in `voice-app/config/devices.json`:
 
-+ **Morpheus** (ext 9000) - General assistant
-+ **Cephanie** (ext 9002) - Storage monitoring bot
+1.  **Morpheus (Ext 9000)**
+    *   **Role:** Primary Assistant ("Call from Me")
+    *   **Description:** Handles general inquiries and outbound calls on your behalf.
+    *   **Personality:** Helpful, systematic, excellence-driven.
+
+2.  **TheOne (Ext 9001)**
+    *   **Role:** Fax Machine Interface
+    *   **Description:** A specialized agent for data transmission and robotic interactions.
+    *   **Personality:** Robotic, concise, data-focused.
+    *   **Special Feature:** `skipThinking: true` (Suppresses "thinking" sounds for a pure machine-like experience).
+
+3.  **Trinity (Ext 9002)**
+    *   **Role:** Mesh Operations
+    *   **Description:** Skilled agent for complex tasks and system coordination.
+    *   **Personality:** Brief, skilled, direct.
+
+### Configuring Your Agents
+
+To set up your mesh network:
+
+1.  Copy the example configuration:
+    ```bash
+    cp voice-app/config/devices.json.example voice-app/config/devices.json
+    ```
+2.  Edit `voice-app/config/devices.json` and enter your SIP credentials (`authId`, `password`) for each extension.
+3.  Restart the voice app:
+    ```bash
+    docker restart voice-app
+    ```
 
 ## Mission Control Dashboard
 
