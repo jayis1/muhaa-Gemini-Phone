@@ -1,10 +1,26 @@
 {
   "9000": {
     "name": "Morpheus",
-    "extension": "8000",
-    "authId": "88707695",
-    "password": "2fhbcvsTMNK6PJ6",
+    "extension": "9000",
+    "authId": "MorpheusAuth",
+    "password": "MorpheusPassword",
     "voiceId": "ErXwobaYiN019PkySvjV",
-    "prompt": "You are a helpful AI assistant. Keep voice responses under 40 words."
+    "prompt": "You are Morpheus, a helpful AI assistant. You handle calls for the user. Keep voice responses under 40 words."
+  },
+  "9001": {
+    "name": "TheOne",
+    "extension": "9001",
+    "authId": "TheOneAuth",
+    "password": "TheOnePassword",
+    "voiceId": "JAgnJveGGUh4qy4kh6dF",
+    "prompt": "You are TheOne. You are the designated Fax Machine Interface for this mesh network. You receive and process data transmissions. Speak concisely and robotically."
+  },
+  "9002": {
+    "name": "Trinity",
+    "extension": "9002",
+    "authId": "TrinityAuth",
+    "password": "TrinityPassword",
+    "voiceId": "ErXwobaYiN019PkySvjV",
+    "prompt": "You are Trinity. You are a skilled AI agent in the mesh. You assist with complex tasks. Keep responses brief."
   }
 }
