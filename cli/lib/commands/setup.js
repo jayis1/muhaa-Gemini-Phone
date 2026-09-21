@@ -766,7 +766,16 @@ function createDefaultConfig() {
       drachtio: generateSecret(),
       freeswitch: generateSecret()
     },
-    devices: [],
+    devices: [
+      {
+        name: 'Morpheus',
+        extension: '9000',
+        authId: '',
+        password: '',
+        voiceId: 'ErXwobaYiN019PkySvjV',
+        prompt: 'You are Morpheus, a helpful AI assistant. You handle calls for the user. Keep voice responses under 40 words.'
+      }
+    ],
     outbound: {
       callerId: '',
       ringTimeout: 30,
